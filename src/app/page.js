@@ -4,8 +4,8 @@ import { mdToHTML } from "./snarkdown";
 import { Pagination } from "./components/pagination";
 
 export default async function Home({searchParams}) {
-  const { page} = searchParams;
-  const {data: games, pagination} = await getGames( +page );
+  const { page } = searchParams;
+  const {data: games, pagination} = await getGames({ page });
   console.log(games);
 
   const coverImagesPromises = games.map(({ attributes }) => getCoverImages({ attributes }));

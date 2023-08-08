@@ -18,19 +18,18 @@ export function Pagination({ pagination }) {
   const nextPage = page + 1;
 
   const prevPageUrl = isFirsPage ? '#' : `?page=${prevPage}`;
-  const nextPageUrl = isFirsPage ? '#' : `?page=${nextPage}`;
+  const nextPageUrl = isLastPage ? '#' : `?page=${nextPage}`;
 
   return (
     <div className="flex flex-col items-center">
       <span className="text-sm text-gray-700 dark:text-gray-400">
-        Showing{" "}
-        <span className="font-semibold text-gray-900 dark:text-white">1</span> to{" "}
-        <span className="font-semibold text-gray-900 dark:text-white">10</span> of{" "}
-        <span className="font-semibold text-gray-900 dark:text-white">100</span>{" "}
-        Entries
+        Pagina{" "}
+        <span className="font-semibold text-gray-900 dark:text-white">{page}</span> de{" "} 
+        <span className="font-semibold text-gray-900 dark:text-white">{total}</span>
+        Video juegos 🕹️
       </span>
       <div className="inline-flex mt-2 xs:mt-0">
-        <Link href={prevPageUrl} disabled={isFirsPage} className={`${isFirsPage ? 'pointer-event-none opaciry-50' : ''} flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
+        <Link href={prevPageUrl} disabled={isFirsPage} className={`${isFirsPage ? 'pointer-event-none opacity-50' : ''} flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
           <svg
             className="w-3.5 h-3.5 mr-2"
             aria-hidden="true"
@@ -48,7 +47,7 @@ export function Pagination({ pagination }) {
           </svg>
           Prev
         </Link >
-        <Link href={nextPageUrl} disabled={isLastPage} className={`${isLastPage ? 'pointer-event-none opaciry-50' : ''} flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
+        <Link href={nextPageUrl} disabled={isLastPage} className={`${isLastPage ? 'pointer-event-none opacity-50' : ''} flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
           Next
           <svg
             className="w-3.5 h-3.5 ml-2"

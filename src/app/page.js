@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getGames, getCoverImages } from "../services/games";
 import { mdToHTML } from "./snarkdown";
 import { Pagination } from "./components/pagination";
-
 export default async function Home({ searchParams }) {
   const { page } = searchParams;
   const { data: games, pagination } = await getGames({ page });
@@ -15,42 +14,42 @@ export default async function Home({ searchParams }) {
 
   return (
     <>
-      <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-          <a href="https://flowbite.com" class="flex items-center">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+          <a href='' className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-8 mr-3"
-              alt="Flowbite Logo"
+              src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3DGAME&psig=AOvVaw2I7HODnm_mW4D1TDN9V-3k&ust=1692328667837000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIi-tNrd4oADFQAAAAAdAAAAABAW'
+              className="w-20"
+              alt=""
             />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              games library
             </span>
           </a>
-          <div class="flex items-center">
+          <div className="flex items-center">
             <a
               href="tel:5541251234"
-              class="mr-6 text-sm  text-gray-500 dark:text-white hover:underline"
+              className="mr-6 text-sm  text-gray-500 dark:text-white hover:underline"
             >
               (555) 412-1234
             </a>
             <a
               href="#"
-              class="text-sm  text-blue-600 dark:text-blue-500 hover:underline"
+              className="text-sm  text-blue-600 dark:text-blue-500 hover:underline"
             >
               Login
             </a>
           </div>
         </div>
       </nav>
-      <nav class="bg-gray-50 dark:bg-gray-700">
-        <div class="max-w-screen-xl px-4 py-3 mx-auto">
-          <div class="flex items-center">
-            <ul class="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
+      <nav className="bg-gray-50 dark:bg-gray-700">
+        <div className="max-w-screen-xl px-4 py-3 mx-auto">
+          <div className="flex items-center">
+            <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
               <li>
                 <a
                   href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  className="text-gray-900 dark:text-white hover:underline"
                   aria-current="page"
                 >
                   Home
@@ -59,7 +58,7 @@ export default async function Home({ searchParams }) {
               <li>
                 <a
                   href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  className="text-gray-900 dark:text-white hover:underline"
                 >
                   Company
                 </a>
@@ -67,7 +66,7 @@ export default async function Home({ searchParams }) {
               <li>
                 <a
                   href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  className="text-gray-900 dark:text-white hover:underline"
                 >
                   Team
                 </a>
@@ -75,7 +74,7 @@ export default async function Home({ searchParams }) {
               <li>
                 <a
                   href="#"
-                  class="text-gray-900 dark:text-white hover:underline"
+                  className="text-gray-900 dark:text-white hover:underline"
                 >
                   Features
                 </a>
@@ -111,36 +110,36 @@ export default async function Home({ searchParams }) {
         ))}
         <Pagination pagination={pagination} />
       </main>
-        <footer class="bg-white rounded-xl shadow m-4 dark:bg-gray-800">
-          <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <footer className="bg-white rounded-xl shadow m-4 dark:bg-gray-800">
+          <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
               <Link
                 href="www.linkedin.com/in/matias-torres-developer-freelance/"
-                class="hover:underline"
+                className="hover:underline"
               >
                 M.T_DESAROLLO-WEB™
               </Link>
               . All Rights Reserved.
             </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
               <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6 ">
+                <a href="#" className="mr-4 hover:underline md:mr-6 ">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">
+                <a href="#" className="mr-4 hover:underline md:mr-6">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">
+                <a href="#" className="mr-4 hover:underline md:mr-6">
                   Licensing
                 </a>
               </li>
               <li>
-                <a href="#" class="hover:underline">
+                <a href="#" className="hover:underline">
                   Contact
                 </a>
               </li>

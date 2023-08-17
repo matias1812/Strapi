@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../components/pagination.css"
 /* 
   "pagination": {
     "page": 3,
@@ -28,7 +29,7 @@ export function Pagination({ pagination }) {
         <span className="font-semibold text-gray-900 dark:text-white">{total}</span>
         Video juegos 🕹️
       </span>
-      <div className="inline-flex mt-2 xs:mt-0">
+      <div className="inline-flex mt-2 xs:mt-0 ">
         <Link href={prevPageUrl} disabled={isFirsPage} className={`${isFirsPage ? 'pointer-event-none opacity-50' : ''} flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
           <svg
             className="w-3.5 h-3.5 mr-2"
